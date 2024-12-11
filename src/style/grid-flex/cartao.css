@@ -1,0 +1,41 @@
+.secao-horizontal .cartao{
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-rows: auto 3rem 0.9rem;
+    column-gap: 1.25em;
+}
+
+.secao-horizontal .cartao__imagem{
+    grid-area: 1 / 1 / 4 / 2; /*eh um grid item, que vocce aplica diretamente no item que voce quer modificar*/
+}
+
+.secao-horizontal .cartao__botao{
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.secao-horizontal .cartao__titulo{
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.secao-horizontal .cartao__player{
+    grid-area: 3 / 2 / 4 / 3;
+}
+
+.secao-vertical .secao__cartoes{
+    display: grid;
+    grid-auto-flow: column; /*organiza todos os elementos automaticamente em colunas*/
+    overflow-x: scroll;
+    overflow-y: hidden;
+    grid-column: 1/3; /*faz os elementos ocuparem da borda 1 ate a borda 3*/
+    column-gap: 1.25rem;
+}
+
+.secao-vertical .secao__cartoes .cartao a{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.secao-vertical .secao__cartoes .cartao__titulo{
+    flex-grow: 1;
+}

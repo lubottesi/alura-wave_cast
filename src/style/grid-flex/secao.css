@@ -1,0 +1,21 @@
+.secao{
+    display: grid;
+    align-items: end;
+    row-gap: 2rem;
+
+}
+
+.secao-horizontal, .secao-vertical{
+    grid-template-rows: 70px auto;
+}
+
+.secao-horizontal .secao__cartoes{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(80%/2, max(350px, 80%/3)), 1fr)); /*min max define a largura minima e maxima do containeer - usei esses elementos para nao usar o @midia*/
+    gap: 1.25rem; /* gap entre as colunas e linhas*/
+}
+
+.secao-vertical{
+    grid-template-columns: 1fr auto;
+    
+}

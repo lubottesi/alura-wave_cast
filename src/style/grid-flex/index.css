@@ -1,0 +1,19 @@
+body{
+    display: grid;
+    grid-template-areas: /*define as areas para posicionar os elemnetos*/
+    "aside header"  /*menu lateral e depois o header*/
+    "aside main";  /*embaixo vai ser o menu lateral novamene e o main*/
+    grid-template-columns: auto 1fr; /*define a largura*/
+}
+
+.cabecalho{
+    grid-area: header;
+}
+
+.menu-lateral{
+    grid-area: aside;
+}
+
+.principal{
+    grid-area: main;
+}
